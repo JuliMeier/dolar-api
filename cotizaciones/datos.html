@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="datos.css">
+    <link rel="icon" href="https://images.vexels.com/media/users/3/135829/isolated/preview/1a857d341d8b6dd31426d6a62a8d9054-icono-de-moneda-de-moneda-de-d-lar.png" type="icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Datos de la Moneda</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <img src="../logo.png" alt="logo-cotizaciones">
+            <h1>Cotizaciones.com</h1>
+        </div>
+        <div class="header-button">
+            <button class="button-nav cotizaciones">Cotizaciones</button>
+            <button class="button-nav historicos">Historicos</button>
+        </div>
+    </header>
+    <main class="main-container">
+        <div class="main-header">
+            <div>
+                <h3>Cotizaciones</h3>
+                <p class="text-main">Selecciona la moneda sobre la que quieras recibir su cotización al Mail</p>
+            </div>
+            <div class="time-header">
+                <button class="button-time">Tiempo Real</button>
+                <p class="text-main">22/08/2024 17:58</p>
+            </div>
+
+        </div>       
+        <form action="">
+            <select>
+                <option value="" disabled selected>Seleccione moneda</option>
+                <option value="dolar-oficial">Dólar Oficial</option>
+                <option value="dolar-blue">Dólar Blue</option>
+                <option value="dolar-bolsa">Dólar Bolsa</option>
+                <option value="dolar-ccl">Dólar CCL</option>
+                <option value="dolar-tarjeta">Dólar Tarjeta</option>
+                <option value="dolar-mayorista">Dólar Mayorista</option>
+                <option value="dolar-cripto">Dólar Cripto</option>
+                <option value="real">Real</option>
+                <option value="peso-chile">Peso Chileno</option>
+                <option value="peso-uruguayo">Peso Uruguayo</option>
+                <option value="euro">Euro</option>
+            </select>
+            <button class="button-send">Enviar</button>
+        </form>
+        <div class="card-container">
+
+            <div class="card-cotizaciones" style="display: none">
+                <div class="card-name">
+                    <h4></h4>
+                </div>
+                <div class="card-values">
+                    <div class="values-left">
+                        <p class="value-name">Compra</p>
+                        <p class="value-price" id="precio-compra"></p>
+                    </div>
+                    <div class="values-right">
+                        <p class="value-name">Venta</p>
+                        <p class="value-price" id="precio-venta"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="card-cotizaciones">
+                <div class="card-name">
+                    <h4>Dólar Blue</h4>
+                </div>
+                <div class="card-values">
+                    <div class="values-left">
+                        <p class="value-name">Compra</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                    <div class="values-right">
+                        <p class="value-name">Venta</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-cotizaciones">
+                <div class="card-name">
+                    <h4>Dólar Bolsa</h4>
+                </div>
+                <div class="card-values">
+                    <div class="values-left">
+                        <p class="value-name">Compra</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                    <div class="values-right">
+                        <p class="value-name">Venta</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-cotizaciones">
+                <div class="card-name">
+                    <h4>Dólar CCL</h4>
+                </div>
+                <div class="card-values">
+                    <div class="values-left">
+                        <p class="value-name">Compra</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                    <div class="values-right">
+                        <p class="value-name">Venta</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-cotizaciones">
+                <div class="card-name">
+                    <h4>Dólar Tarjeta</h4>
+                </div>
+                <div class="card-values">
+                    <div class="values-left">
+                        <p class="value-name">Compra</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                    <div class="values-right">
+                        <p class="value-name">Venta</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-cotizaciones">
+                <div class="card-name">
+                    <h4>Dólar Mayorista</h4>
+                </div>
+                <div class="card-values">
+                    <div class="values-left">
+                        <p class="value-name">Compra</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                    <div class="values-right">
+                        <p class="value-name">Venta</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-cotizaciones">
+                <div class="card-name">
+                    <h4>Dólar Cripto</h4>
+                </div>
+                <div class="card-values">
+                    <div class="values-left">
+                        <p class="value-name">Compra</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                    <div class="values-right">
+                        <p class="value-name">Venta</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-cotizaciones">
+                <div class="card-name">
+                    <h4>Real</h4>
+                </div>
+                <div class="card-values">
+                    <div class="values-left">
+                        <p class="value-name">Compra</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                    <div class="values-right">
+                        <p class="value-name">Venta</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-cotizaciones">
+                <div class="card-name">
+                    <h4>Peso Chileno</h4>
+                </div>
+                <div class="card-values">
+                    <div class="values-left">
+                        <p class="value-name">Compra</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                    <div class="values-right">
+                        <p class="value-name">Venta</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-cotizaciones">
+                <div class="card-name">
+                    <h4>Peso Uruguayo</h4>
+                </div>
+                <div class="card-values">
+                    <div class="values-left">
+                        <p class="value-name">Compra</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                    <div class="values-right">
+                        <p class="value-name">Venta</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-cotizaciones">
+                <div class="card-name">
+                    <h4>Euro</h4>
+                </div>
+                <div class="card-values">
+                    <div class="values-left">
+                        <p class="value-name">Compra</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                    <div class="values-right">
+                        <p class="value-name">Venta</p>
+                        <p class="value-price">$3000</p>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-integrantes">
+                <h4>Integrantes</h4>
+                <a href="">Integrantes</a>
+                <a href="">Integrantes</a>   
+            </div>
+        </div>
+        <div class="footer-principal">
+            <h4>Tecnicatura Universitaria en Programación</h4>
+            <h5>UTN</h5>
+        </div>
+        <div class="footer-fuente">
+            <h4>Fuente</h4>
+            <a href="">https://dolarapi.com</a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../cotizaciones/datos.js"></script>
+</body>
+</html>
