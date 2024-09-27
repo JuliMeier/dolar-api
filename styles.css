@@ -47,9 +47,14 @@
     border-radius: 100px;
 
   }
-.historicos {
-  background-color: var(--color-2);
-  color: #000;
+
+  .historicos{
+    background-color: var(--color-2);
+    color: #000;
+  }
+
+.historicos:hover {
+  background-color: #999792;;
 }
 
 
@@ -61,6 +66,10 @@
     border-radius: 100px;
     color: #fff;
   }
+
+  .button-time:hover {
+    background-color: #337757;
+  }
   
   .button-send {
     width: 180px;
@@ -69,6 +78,10 @@
     color: #fff;
     border: none;
     border-radius: 100px;
+  }
+
+  .button-send:hover {
+    background-color: #2b4359;
   }
   
   .main-container {
@@ -151,7 +164,7 @@
 footer {
   background-color: var(--principal-color);
   color: #fff;
-  height: 118px;
+   height: 118px; 
   padding: 80px;
   display: flex;
   justify-content: space-between;
