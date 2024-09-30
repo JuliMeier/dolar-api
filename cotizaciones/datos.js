@@ -7,10 +7,10 @@ function cotizacionesDolar() {
     .then((response) => response.json())
     .then((data) => {
       for (let i = 0; i < data.length; i++) {
-        renderizarCotizaciones(data[i].nombre, data[i].compra, data[i].venta);
+        renderizarCotizaciones(data[i].nombre, data[i].compra.toLocaleString("es-ES"), data[i].venta.toLocaleString("es-ES"));
       }
-      mostrarTiempoReal(data[0].fechaActualizacion);
-      console.log(data[0].fechaActualizacion);
+      mostrarTiempoReal(data[2].fechaActualizacion);
+      console.log(data[2].fechaActualizacion);
     });
 }
 
@@ -22,7 +22,7 @@ function cotizacionesOtras() {
       // console.log(data)
       {
         for (let i = 0; i < data.length; i++) {
-          renderizarCotizaciones(data[i].nombre, data[i].compra, data[i].venta);
+          renderizarCotizaciones(data[i].nombre, data[i].compra.toLocaleString("es-ES"), data[i].venta.toLocaleString("es-ES"));
         }
       }
     );
@@ -43,6 +43,7 @@ function renderizarCotizaciones(nombre, compra, venta){
     document.querySelector(".card-container").appendChild(card);
 }
 
+// funcion que me trae la fecha de la api
 
 function mostrarTiempoReal(fecha) {
 
@@ -67,6 +68,20 @@ function mostrarTiempoReal(fecha) {
     document.querySelector("#hora").innerHTML = fechaFormateada;
 
 }
+
+// funcion para borrar las card al actualizar y que no se dupliquen.
+function actualizarCards(){
+  let cards = document.querySelectorAll(".card-cotizaciones");
+  cards.forEach(card => card.style.display = 'none');
+  cotizacionesDolar();
+  cotizacionesOtras();
+  
+  }
+
+
+
+
+// para formatear los tipos de cambio     .toLocaleString('es-ES',{maximumFractionDigits: 2, useGrouping:"always"})
 
 
 
