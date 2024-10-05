@@ -10,7 +10,7 @@ function cotizacionesDolar() {
         renderizarCotizaciones(data[i].nombre, data[i].compra.toLocaleString("es-ES"), data[i].venta.toLocaleString("es-ES"));
       }
       mostrarTiempoReal(data[2].fechaActualizacion);
-      console.log(data[2].fechaActualizacion);
+      
     });
 }
 

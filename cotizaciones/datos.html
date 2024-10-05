@@ -47,8 +47,41 @@
                 <option value="peso-uruguayo">Peso Uruguayo</option>
                 <option value="euro">Euro</option>
             </select>
-            <button class="button-send">Enviar</button>
+            <button type="button" class="button-send" data-bs-toggle="modal" data-bs-target="#formModal" >Enviar</button>
         </form>
+
+        <!-- Modal de formulario-->
+
+  <!-- Modal -->
+  <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Formulario de contacto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form id="contactForm" >
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" required>
+                  </div>
+
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <!-- Card de cotizaciones-->
         <div class="card-container">
 
             <div class="card-cotizaciones" style="display: none">
@@ -66,166 +99,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="card-cotizaciones">
-                <div class="card-name">
-                    <h4>Dólar Blue</h4>
-                </div>
-                <div class="card-values">
-                    <div class="values-left">
-                        <p class="value-name">Compra</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                    <div class="values-right">
-                        <p class="value-name">Venta</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-cotizaciones">
-                <div class="card-name">
-                    <h4>Dólar Bolsa</h4>
-                </div>
-                <div class="card-values">
-                    <div class="values-left">
-                        <p class="value-name">Compra</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                    <div class="values-right">
-                        <p class="value-name">Venta</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-cotizaciones">
-                <div class="card-name">
-                    <h4>Dólar CCL</h4>
-                </div>
-                <div class="card-values">
-                    <div class="values-left">
-                        <p class="value-name">Compra</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                    <div class="values-right">
-                        <p class="value-name">Venta</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-cotizaciones">
-                <div class="card-name">
-                    <h4>Dólar Tarjeta</h4>
-                </div>
-                <div class="card-values">
-                    <div class="values-left">
-                        <p class="value-name">Compra</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                    <div class="values-right">
-                        <p class="value-name">Venta</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-cotizaciones">
-                <div class="card-name">
-                    <h4>Dólar Mayorista</h4>
-                </div>
-                <div class="card-values">
-                    <div class="values-left">
-                        <p class="value-name">Compra</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                    <div class="values-right">
-                        <p class="value-name">Venta</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-cotizaciones">
-                <div class="card-name">
-                    <h4>Dólar Cripto</h4>
-                </div>
-                <div class="card-values">
-                    <div class="values-left">
-                        <p class="value-name">Compra</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                    <div class="values-right">
-                        <p class="value-name">Venta</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-cotizaciones">
-                <div class="card-name">
-                    <h4>Real</h4>
-                </div>
-                <div class="card-values">
-                    <div class="values-left">
-                        <p class="value-name">Compra</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                    <div class="values-right">
-                        <p class="value-name">Venta</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-cotizaciones">
-                <div class="card-name">
-                    <h4>Peso Chileno</h4>
-                </div>
-                <div class="card-values">
-                    <div class="values-left">
-                        <p class="value-name">Compra</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                    <div class="values-right">
-                        <p class="value-name">Venta</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-cotizaciones">
-                <div class="card-name">
-                    <h4>Peso Uruguayo</h4>
-                </div>
-                <div class="card-values">
-                    <div class="values-left">
-                        <p class="value-name">Compra</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                    <div class="values-right">
-                        <p class="value-name">Venta</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-cotizaciones">
-                <div class="card-name">
-                    <h4>Euro</h4>
-                </div>
-                <div class="card-values">
-                    <div class="values-left">
-                        <p class="value-name">Compra</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                    <div class="values-right">
-                        <p class="value-name">Venta</p>
-                        <p class="value-price">$3000</p>
-                    </div>
-                </div>
-            </div> -->
 
         </div>
     </main>
