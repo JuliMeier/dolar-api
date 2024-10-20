@@ -1,3 +1,6 @@
+const cards = document.querySelector(".card-cotizaciones")
+
+
 cotizacionesDolar();
 cotizacionesOtras();
 
@@ -28,15 +31,16 @@ function cotizacionesOtras() {
     );
 }
 
-
+// funcion que me renderiza las card de las cotizaciones
 function renderizarCotizaciones(nombre, compra, venta){
-    let card = document.querySelector(".card-cotizaciones").cloneNode(true);
-
+    
+    let card = cards.cloneNode(true);
+    
     console.log(card);
 
     card.querySelector(".card-name").innerHTML = `<h4>${nombre}</h4>`;
-    card.querySelector("#precio-compra").innerHTML = `<p>${compra}</p>`;
-    card.querySelector("#precio-venta").innerHTML = `<p>${venta}</p>`;
+    card.querySelector("#precio-compra").innerHTML = `<span>${compra}</span>`;
+    card.querySelector("#precio-venta").innerHTML = `<span>${venta}</span>`;
 
     card.style.display = "flex";
 

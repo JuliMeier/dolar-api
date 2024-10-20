@@ -10,16 +10,29 @@
 </head>
 <body>
     <header class="header">
+
         <div class="header-logo">
             <img src="../logo.png" alt="logo-cotizaciones">
             <h1>Cotizaciones.com</h1>
         </div>
-        <div class="header-button">
-            <a class="button-nav cotizaciones">Cotizaciones</a>
-            <a class="button-nav historicos" href="../historicos/historicos.html" target="_blank">Historicos</a> 
-            
-        </div>
-    </header>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link button-nav cotizaciones" href="#">Cotizaciones</a> 
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link button-nav historicos" href="../historicos/historicos.html" target="_blank">Históricos</a>
+                  </li>
+                </ul>
+              </div>
+            </nav> 
+
+    </header> 
     <main class="main-container">
         <div class="main-header">
             <div>
@@ -33,7 +46,7 @@
 
         </div>       
         <form action="">
-            <select>
+            <select id="moneda-select">
                 <option value="" disabled selected>Seleccione moneda</option>
                 <option value="dolar-oficial">Dólar Oficial</option>
                 <option value="dolar-blue">Dólar Blue</option>
@@ -90,17 +103,18 @@
                 </div>
                 <div class="card-values">
                     <div class="values-left">
-                        <p class="value-name">Compra</p>
-                        <p class="value-price" id="precio-compra"></p>
+                        <span class="value-name">Compra</span>
+                        <span class="value-price" id="precio-compra"></span>
                     </div>
                     <div class="values-right">
-                        <p class="value-name">Venta</p>
-                        <p class="value-price" id="precio-venta"></p>
+                        <span class="value-name">Venta</span>
+                        <span class="value-price" id="precio-venta"></span>
                     </div>
                 </div>
             </div>
 
         </div>
+
     </main>
     <footer>
         <div class="footer-container">
